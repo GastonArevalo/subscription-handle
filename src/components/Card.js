@@ -1,7 +1,10 @@
 import "../styles/card.css";
-import logo_yt from "../resources/yt-logo.svg";
-
 function Card(props) {
+	const fecha = new Date(props.data.date)
+
+	const months = ["January","February","March","April","May","June","July","August",
+ "September","October","November","December"];
+
 	return (
 		<div className="card1">
 			<div className="card-logo">
@@ -14,7 +17,7 @@ function Card(props) {
 				<h4>{props.data.info}</h4>
 			</div>
 			<div className="card-date">
-				<h4>{props.data.date}</h4>
+				<h4>{fecha.getDay()} {months[fecha.getMonth()]} {fecha.getFullYear()}</h4>
 			</div>
 		</div>
 	);

@@ -5,14 +5,14 @@ import Card from "./Card";
 const data = [
     {
     id: 0,
-    date: '2022-4-2',
+    date: '2022-5-2',
     title:'Youtube',
     info:'expire in 3 months',
     img:'https://upload.wikimedia.org/wikipedia/commons/d/dd/YouTube_Premium_logo.svg'
     },
     {
     id: 1,
-    date: '2022-4-2',
+    date: '3 April',
     title:'hbo',
     info:'expire in 1 month',
     img:'https://upload.wikimedia.org/wikipedia/commons/d/dd/YouTube_Premium_logo.svg'
@@ -26,30 +26,49 @@ const data = [
         },
         {
         id: 3,
-        date: '2022-4-2',
+        date: '2022-04-03',
         title:'hbo',
         info:'expire in 1 month',
         img:'https://upload.wikimedia.org/wikipedia/commons/d/dd/YouTube_Premium_logo.svg'
         }
 ]
-const d = new Date();
-let day = d.getDay();
 
-console.log(day, "el dia de hoy shit");
+
+//  const months = ["January","February","March","April","May","June","July","August",
+//  "September","October","November","December"];
+
+
+
+
+let today = new Date().toISOString().slice(0, 10)
+console.log(today);
+console.log(data[3].date, "data de hoy");
+today < data[0].date ? console.log("si") : console.log("no");
+
 function CardList() {
-	return (
-		<>
-            <div className="container">
-                <div className="row center">
-                     
-                    {
-                    data.map((element) => ( <div className="col-md-6 center p-4"><Card id={element.id} data={element} /></div> ))
-                    }
-                       
+let today = new Date().toISOString().slice(0, 10)
+    
+       
+        return (
+            
+            <>
+                <div className="container">
+                    <div className="row center">
+                         
+                                           
+                        {
+                            data.map((element) => ( 
+                                (today < element.date) ? <div key={element.id} className="col-md-6 center p-4"><Card id={element.id} data={element} /></div> : "no mostra nada"                               
+                                )
+                            )
+                }
+                           
+                    </div>
                 </div>
-            </div>
-        </>
-	);
-}
+            </>
+                            )          
+                        }   
+	
+
 
 export default CardList;

@@ -9,10 +9,10 @@ function Footer() {
 			<footer className="footer-buttons">
 				
 					
-				<button id="conversor" className="mb-2"> CONVERSOR </button>
-				<input type="button" id="home"></input>
+				<a id="conversor" > </a>
+				<a  id="home"></a>
 				
-				<button id="stats"> STATS </button>
+				<a id="stats"></a>
 				
 
 			</footer>

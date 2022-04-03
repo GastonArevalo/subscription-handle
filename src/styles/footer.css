@@ -18,8 +18,12 @@ footer{
     
     
 }
-.footer-buttons > button{
-    text-decoration: none;
+.footer-buttons > a{
+    background-color: rgba(0, 0, 0, 0);
+    border: #000;
+}
+.footer-buttons > a:hover{
+    top: 2px;
 }
 #home{
     background-image:url(../resources/icon-home.svg);
@@ -27,4 +31,19 @@ footer{
     height:100px;
     width:100px;
     background-position:center;
+  }
+  #conversor{
+    background-image:url(../resources/money-icon.svg);
+    background-repeat:no-repeat;
+    height:100px;
+    width:100px;
+    background-position:center;
+  }
+  #stats{
+    background-image:url(../resources/stats\ icon.svg);
+    background-repeat:no-repeat;
+    height:100px;
+    width:100px;
+    background-position:center;
+
   }
