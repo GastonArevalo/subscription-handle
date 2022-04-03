@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "suscriptions",
+  "info": {
+    "singularName": "suscription",
+    "pluralName": "suscriptions",
+    "displayName": "Suscription",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "bank": {
+      "type": "string"
+    },
+    "payment": {
+      "type": "string"
+    },
+    "usuario": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::usuario.usuario",
+      "inversedBy": "usuario"
+    }
+  }
+}
