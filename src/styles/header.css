@@ -1,17 +1,4 @@
-html{
-    margin: 0;
-}
-body{
-    max-height: 100vh;
-    min-height: 100vh;
-    text-align: center;
-}
 
-.center{
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
 header{
     display: flex;
     flex-direction: row;

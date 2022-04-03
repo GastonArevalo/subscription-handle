@@ -1,20 +1,18 @@
 *{
   box-sizing: border-box;
 }
-ody {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-ode {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.logo{
+  width: 110px;
+  height: auto;
 }
-.card{
+.card1{
   background-color: #3A3845;
   display: flex;
   flex-direction: column;
@@ -25,27 +23,20 @@ ode {
   border-radius: 25px;
 }
 .card-logo{
-  width: 60px;
-  height: 60px;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 15px;
-  margin-bottom: -18px;
 }
 .card-title{
    font-family: 'Roboto Condensed', sans-serif; 
    color: #F7CCAC;
-   margin-top: 0px;
+   margin-top: 10px;
 }
 .card-info{
   font-family: 'Roboto Condensed', sans-serif; 
-  
-  color: #C69B7B;
-  margin-top: -20px;
+  color: #C69B7B;  
 
 }
 .card-date{
   font-family: 'Roboto Condensed', sans-serif; 
    color: #F7CCAC;
-   margin-top: -20px;
+   margin-top: 10px;
 }
