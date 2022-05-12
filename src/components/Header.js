@@ -1,3 +1,4 @@
+import React from "react";
 import "../styles/header.css";
 
 import menu_icon from "../resources/menu icon.svg";

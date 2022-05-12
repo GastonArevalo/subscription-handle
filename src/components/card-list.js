@@ -1,3 +1,4 @@
+import React from "react";
 import { Fragment } from "react";
 import "../styles/card.css";
 import Card from "./Card.js";

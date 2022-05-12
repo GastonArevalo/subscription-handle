@@ -1,4 +1,6 @@
 import "../styles/card.css";
+import React from "react";
+
 function Card(props) {
 	const fecha = new Date(props.data.date)
 

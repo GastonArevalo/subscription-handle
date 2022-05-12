@@ -1,6 +1,7 @@
 import "../styles/card.css";
 import add_icon from "../resources/add-icon.svg";
 import CardForm from "./CardForm";
+import React from "react";
 
 function CardPlus() {
 	const newCard = () => {

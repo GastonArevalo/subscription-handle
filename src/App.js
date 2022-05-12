@@ -1,3 +1,4 @@
+import React from "react";
 import "./index.css";
 import CardList from "./components/card-list";
 import Footer from "./components/Footer";
@@ -12,7 +13,7 @@ function App() {
 			<Header />
 
 			<body className="bgc-primary mb-0">
-				<CardForm />
+					<CardForm />
 			</body>
 			<Footer />
 		</div>
