@@ -1,8 +1,9 @@
 import React from "react";
-import { Fragment } from "react";
 import "../styles/card.css";
 import Card from "./Card.js";
 import CardPlus from "./CardPlus.js";
+import CardForm from "./CardForm.js";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 const data = [
 	{
@@ -10,28 +11,32 @@ const data = [
 		date: "2022-5-2",
 		title: "Youtube",
 		info: "expire in 3 months",
-		img: "https://upload.wikimedia.org/wikipedia/commons/d/dd/YouTube_Premium_logo.svg",
+		img:
+			"https://upload.wikimedia.org/wikipedia/commons/d/dd/YouTube_Premium_logo.svg",
 	},
 	{
 		id: 1,
 		date: "3 April",
 		title: "hbo",
 		info: "expire in 1 month",
-		img: "https://upload.wikimedia.org/wikipedia/commons/d/dd/YouTube_Premium_logo.svg",
+		img:
+			"https://upload.wikimedia.org/wikipedia/commons/d/dd/YouTube_Premium_logo.svg",
 	},
 	{
 		id: 2,
 		date: "2022-4-2",
 		title: "Youtube",
 		info: "expire in 3 months",
-		img: "https://upload.wikimedia.org/wikipedia/commons/d/dd/YouTube_Premium_logo.svg",
+		img:
+			"https://upload.wikimedia.org/wikipedia/commons/d/dd/YouTube_Premium_logo.svg",
 	},
 	{
 		id: 3,
 		date: "2022-04-03",
 		title: "hbo",
 		info: "expire in 1 month",
-		img: "https://upload.wikimedia.org/wikipedia/commons/d/dd/YouTube_Premium_logo.svg",
+		img:
+			"https://upload.wikimedia.org/wikipedia/commons/d/dd/YouTube_Premium_logo.svg",
 	},
 ];
 
@@ -47,7 +52,7 @@ function CardList() {
 	let today = new Date().toISOString().slice(0, 10);
 
 	return (
-		<>
+		<Router>
 			<div className="container">
 				<div className="row center">
 					{data.map((element) =>
@@ -57,13 +62,20 @@ function CardList() {
 							</div>
 						) : (
 							<div className="col-md-6 center p-4">
-								<CardPlus />
+								<Link to="/form">
+									<CardPlus />
+								</Link>
 							</div>
 						)
 					)}
 				</div>
+				<Switch>
+					<Route path="/form">
+						<CardForm />
+					</Route>
+				</Switch>
 			</div>
-		</>
+		</Router>
 	);
 }
 
